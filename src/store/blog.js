@@ -116,7 +116,7 @@ export default {
       const objectWithSettings = tagId
         ? {
             params: {
-              $filter: `data/name/iv eq '${tagId}'`
+              $filter: `data/tag/iv eq '${tagId}'`
             }
           }
         : null;
@@ -140,7 +140,7 @@ export default {
         return new Promise((resolve, reject) => {
           const objectWithSettings = {
             params: {
-              $filter: `data/ref/iv eq '${tag.id}'`,
+              $filter: `data/tag/iv eq '${tag.id}'`,
               $top: !i ? 4 : 3
             }
           };
